@@ -1,3 +1,17 @@
+// Disable right-click context menu
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
+
+// Disable keyboard shortcuts for developer tools
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'F12' || 
+        (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) || 
+        (e.ctrlKey && e.key === 'U')) {
+        e.preventDefault();
+    }
+});
+
 // Show love popup
 function showLove() {
     document.getElementById('popup').classList.remove('hidden');
@@ -75,3 +89,23 @@ document.addEventListener('mousemove', (event) => {
         pointerEmoji.remove();
     }, 500);
 });
+
+// Check password
+function checkPassword() {
+    const passwordInput = document.getElementById('password-input').value;
+    const correctPassword = '2801';
+    const errorMessage = document.getElementById('error-message');
+
+    if (passwordInput === correctPassword) {
+        document.getElementById('password-popup').style.display = 'none';
+        document.getElementById('content').classList.remove('blur');
+    } else {
+        errorMessage.classList.remove('hidden');
+        setTimeout(() => {
+            errorMessage.classList.add('hidden');
+        }, 2000);
+    }
+}
+
+// Apply blur effect to content initially
+document.getElementById('content').classList.add('blur');
