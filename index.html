@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Friendship Day!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1> Happy Friendship Day! </h1>
+        <p class="message">To my special friend, you make every day brighter and better! </p>
+
+        <div class="images">
+            <img src="images/friends.png" alt="Friends Forever">
+            <img src="images/heart.png" alt="Hearts">
+        </div>
+
+        <div class="friendship-fun-facts">
+            <h2>Fun Facts About Our Friendship</h2>
+            <ul>
+                <li>We've shared countless laughs and made unforgettable memories together!</li>
+                <li>Our friendship is stronger than any distance or obstacle!</li>
+                <li>We've supported each other through thick and thin, and we always have each other's backs!</li>
+                <li>We've had our fair share of crazy adventures and spontaneous decisions!</li>
+                <li>Our friendship is a beautiful reminder that true friends can come from anywhere and become family!</li>
+            </ul>
+        </div>
+        
+        <div class="cracker" onclick="crackCracker(event)">
+            <video width="80" height="auto" autoplay loop muted>
+                <source src="images/Cracker.webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div id="popup" class="popup hidden">
+            <p>You are loved, more than words can say! </p>
+            <button onclick="closePopup()">Close</button>
+        </div>
+
+        <p class="credits">Designed with love by <a href="#">Ankur</a></p>
+        <p class="copyright">© 2024 Ankur. All rights reserved.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
