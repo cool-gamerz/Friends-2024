@@ -7,13 +7,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <div id="password-popup" class="password-popup">
+        <div class="password-container">
+            <h2>Enter Password</h2>
+            <input type="password" id="password-input" placeholder="Enter password">
+            <button onclick="checkPassword()">Submit</button>
+            <p id="error-message" class="error-message hidden">Your friend gave you the wrong access key</p>
+        </div>
+    </div>
+
+    <div id="content" class="container">
         <h1> Happy Friendship Day! </h1>
         <p class="message">To my special friend, you make every day brighter and better! </p>
 
         <div class="images">
             <img src="images/friends.png" alt="Friends Forever">
-            <img src="images/friends2.png" alt="Hearts">
+            <img src="images/heart.png" alt="Hearts">
         </div>
 
         <div class="friendship-fun-facts">
@@ -29,7 +38,7 @@
         
         <div class="cracker" onclick="crackCracker(event)">
             <video width="80" height="auto" autoplay loop muted>
-                <source src="images/Cracker.webm" type="video/webm">
+                <source src="path/to/your/video.webm" type="video/webm">
                 Your browser does not support the video tag.
             </video>
         </div>
