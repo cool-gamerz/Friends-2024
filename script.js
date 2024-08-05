@@ -74,26 +74,10 @@ document.querySelector('.show-love').addEventListener('click', showLove);
 // Add event listener to close popup button
 document.querySelector('.popup button').addEventListener('click', closePopup);
 
-// Mark pointer location with love emoji on hover
-document.addEventListener('mousemove', (event) => {
-    const pointerEmoji = document.createElement('div');
-    pointerEmoji.className = 'emoji';
-    pointerEmoji.textContent = '💖';
-    pointerEmoji.style.position = 'fixed';
-    pointerEmoji.style.left = `${event.clientX}px`;
-    pointerEmoji.style.top = `${event.clientY}px`;
-    document.body.appendChild(pointerEmoji);
-
-    // Remove pointer emoji after 0.5 seconds
-    setTimeout(() => {
-        pointerEmoji.remove();
-    }, 500);
-});
-
 // Check password
 function checkPassword() {
     const passwordInput = document.getElementById('password-input').value;
-    const correctPassword = '2801';
+    const correctPassword = '2801090807011308'; // Single string for correct password
     const errorMessage = document.getElementById('error-message');
 
     if (passwordInput === correctPassword) {
