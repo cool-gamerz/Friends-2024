@@ -77,10 +77,10 @@ document.querySelector('.popup button').addEventListener('click', closePopup);
 // Check password
 function checkPassword() {
     const passwordInput = document.getElementById('password-input').value;
-    const correctPassword = '2801090807011308'; // Single string for correct password
+    const correctPasswords = ['2801', '0908', '0701', '1308']; // Array of correct passwords
     const errorMessage = document.getElementById('error-message');
 
-    if (passwordInput === correctPassword) {
+    if (correctPasswords.includes(passwordInput)) {
         document.getElementById('password-popup').style.display = 'none';
         document.getElementById('content').classList.remove('blur');
     } else {
